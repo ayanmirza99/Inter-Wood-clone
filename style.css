@@ -1,81 +1,646 @@
-.container{
-    width: 100%;
-    height:100vh;
-    background: linear-gradient(white,rgb(142, 141, 141));
-    display:flex;
-    align-items: center;
-    justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-.calculator{
-    background-image: linear-gradient(black, rgb(74, 70, 70));
-    padding: 20px;
-    border-radius: 24px;
-    height: 62%;
+
+body {
+  font-family: "Poppins", sans-serif;
 }
-.calculator form input{
-    border:1px solid rgb(89, 89, 89);
-    outline:0;
-    width: 65px;
-    height:65px;
-    background: transparent;
-    border-radius: 50px;
-    color:white;
-    cursor:pointer;
-    margin:10px;
-    font-size: 30px;
+
+.header-color {
+  background-color: white;
 }
-.display{
-    display: flex;
-    justify-content: flex-end;
-    margin:20px 0px;
+
+/* --------------- */
+/* TOP MENU START */
+/* --------------- */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
 }
-form .display input{
-    text-align: right;
-    flex-grow: 1;
-    font-size: 45px;
-    border:none;
+
+nav ul {
+  display: flex;
 }
-form .clear input{
-    width: 330px;
-    border-color: rgb(255, 98, 0);
-    border-width: 2px;
-    border-radius: 12px;
+.initial {
+  padding-left: 580px;
 }
-.title{
-    color: white;
-    display: flex;
-    justify-content: center;
-    font-size:larger;
-    color: rgb(255, 98, 0);
-    margin-top: -38px;
+
+nav ul li {
+  display: inline-block;
+  padding: 4px 25px;
 }
-.under-title{
-    width:65%;
-    margin-top: -24px;
-    height:4px;
-    background-color: rgb(255, 98, 0);
+nav ul li a:hover {
+  color: #21b259;
 }
-hr{
-    width: 86%;
-    height: 2px;
-    background-color: rgb(98, 97, 97);
-    border: none;
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
 }
-.r-1 .divide{
-    background-color: rgb(89, 89, 89);
+
+.top-menu .left a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #21b259;
 }
-.r-2 .multiply{
-    background-color: rgb(89, 89, 89);
+
+/* --------------- */
+/* TOP MENU FINISH */
+/* --------------- */
+
+hr {
+  opacity: 15%;
 }
-.r-3 .plus{
-    background-color: rgb(89, 89, 89);
+
+/* CENTER MENU START */
+.middle {
+  align-items: center;
 }
-.r-4 .minus{
-    background-color: rgb(89, 89, 89);
+
+.logo {
+  padding-top: 08px;
+ 
 }
-.r-4 .point{
-    background-color: rgb(89, 89, 89);
+
+.search {
+  display: flex;
 }
-form .r-4 .equal{
-    background-color: rgb(255, 98, 0);
+
+.search-bar {
+  width: 800px;
+  margin-top: 0;
+  height: 68px;
+  background-color: #f7f7f7;
+  border: none;
+  padding-left: 15px;
+}
+
+.search-btn {
+  border: none;
+  background-color: #f7f7f7;
+  padding-right: 20px;
+  color: #21b259;
+}
+
+.icons {
+  padding-top: 15px;
+  margin-left: -100px;
+}
+
+/* --------------- */
+/* BOTTOM MENU START */
+/* --------------- */
+
+.primary li:hover {
+  color: #21b259;
+}
+.drop .primary .one a {
+  color: red;
+}
+.drop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  position: absolute;
+}
+
+.drop .primary .pds {
+  background-color: white;
+  position: absolute;
+  width: 350px;
+  padding-left: 0%;
+  display: none;
+}
+.drop .primary .one li a {
+  color: black;
+}
+.drop .primary .one li a:hover {
+  color: #21b259;
+  font-weight: 600;
+}
+.pds li:hover {
+  color: #21b259;
+  text-decoration: none;
+}
+.drop .primary .one:hover > .pds {
+  display: block;
+  transition: ease-in-out;
+}
+
+/* --------------- */
+/* BEDROOM DROPDOWN */
+/* --------------- */
+
+.drop .primary .bdr {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .two:hover > .bdr {
+  display: block;
+  transition: ease-in-out;
+}
+.bdr li {
+  padding-left: 0;
+  text-align: left;
+}
+.bdr li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.bdr li a:hover {
+  font-weight: 600;
+}
+
+/* --------------- */
+/* LIVING DROPDOWN */
+/* --------------- */
+
+.drop .primary .liv {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .three:hover > .liv {
+  display: block;
+  transition: ease-in-out;
+}
+.liv li {
+  padding-left: 0;
+  text-align: left;
+}
+.liv li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.liv li a:hover {
+  font-weight: 600;
+}
+
+/* --------------- */
+/* STUDY DROPDOWN */
+/* --------------- */
+
+.drop .primary .std {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .four:hover > .std {
+  display: block;
+  transition: ease-in-out;
+}
+.std li {
+  padding-left: 0;
+  text-align: left;
+}
+.std li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.std li a:hover {
+  font-weight: 600;
+}
+
+/* --------------- */
+/* KIDS DROPDOWN */
+/* --------------- */
+
+.drop .primary .kids {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .five:hover > .kids {
+  display: block;
+  transition: ease-in-out;
+}
+.kids li {
+  padding-left: 0;
+  text-align: left;
+}
+.kids li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.kids li a:hover {
+  font-weight: 600;
+}
+
+/* --------------- */
+/* DINING DROPDOWN */
+/* --------------- */
+
+.drop .primary .dining {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .six:hover > .dining {
+  display: block;
+  transition: ease-in-out;
+}
+.dining li {
+  padding-left: 0;
+  text-align: left;
+}
+.dining li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.dining li a:hover {
+  font-weight: 600;
+}
+
+/* DECOR DROPDOWN */
+.drop .primary .decor {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .seven:hover > .decor {
+  display: block;
+  transition: ease-in-out;
+}
+.decor li {
+  padding-left: 0;
+  text-align: left;
+}
+.decor li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.decor li a:hover {
+  font-weight: 600;
+}
+
+/* OFFICE DROPDOWN */
+.drop .primary .office {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .eight:hover > .office {
+  display: block;
+  transition: ease-in-out;
+}
+.office li {
+  padding-left: 0;
+  text-align: left;
+}
+.office li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.office li a:hover {
+  font-weight: 600;
+}
+
+/* KITCHEN DROPDOWN */
+.drop .primary .kitchen {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .nine:hover > .kitchen {
+  display: block;
+  transition: ease-in-out;
+}
+.kitchen li {
+  padding-left: 0;
+  text-align: left;
+}
+.kitchen li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.kitchen li a:hover {
+  font-weight: 600;
+}
+
+/* DOORS DROPDOWN */
+.drop .primary .doors {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+.drop .primary .ten:hover > .doors {
+  display: block;
+  transition: ease-in-out;
+}
+.doors li {
+  padding-left: 0;
+  text-align: left;
+}
+.doors li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.doors li a:hover {
+  font-weight: 600;
+}
+
+/* WARDROBE DROPDOWN */
+.drop .primary .wdr {
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  display: none;
+}
+
+.drop .primary .eleven:hover > .wdr {
+  display: block;
+  transition: ease-in-out;
+}
+.wdr li {
+  padding-left: 0;
+  text-align: left;
+}
+.wdr li:hover {
+  color: #21b259;
+  cursor: pointer;
+  text-decoration: none;
+}
+.wdr li a:hover {
+  font-weight: 600;
+}
+
+
+
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+
+
+
+/*-----------------------*/
+/*-----------------------*/
+/*-----------------------*/
+/*-----------------------*/
+/*-----------------------*/
+
+
+
+
+
+
+
+.sale-img {
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.heading>h2 {
+  font-weight: 300;
+  font-size: 28px;
+  /* margin-top: 5px; */
+}
+
+.heading>h2>span {
+  display: inline-block;
+}
+
+.heading>h2>span>div {
+  display: inline-block;
+  width: 70%;
+  border-bottom: 3px solid #21B259;
+  margin: auto;
+  margin-bottom: 19px;
+}
+
+.items-container {
+  max-width: 1440px;
+  width: 90vw;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* height: 20vw; */
+  margin-top: 16px;
+}
+
+.item {
+  width: 15%;
+  border: 2px solid #e4e4e4;
+  text-align: center;
+  transition: all .4s ease-out;
+}
+
+.item:hover {
+  color: #21B259;
+  border: 2px solid green;
+}
+
+.item>h3 {
+  font-weight: 300;
+}
+
+.images {
+  width: 40%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* margin-left: 8%; */
+  /* transition: all .2s ease-out; */
+
+}
+
+.new-arrivals-image-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.new-arrivals-image {
+  width: 100%;
+}
+
+.best-seller-image {
+  width: 100%;
+}
+
+.decor-image-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+}
+
+.sale-image-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+}
+
+.image {
+  width: 46%;
+}
+
+.home-decor-image {
+  width: 100%;
+}
+
+.kitchen-image {
+  width: 100%;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px 0px;
+}
+
+.left-bottom,
+.right-bottom {
+  width: 48%;
+  /* border: 2px solid black;    */
+  display: flex;
+  align-items: center;
+  height: 62vh;
+
+}
+
+.left-bottom {
+  background-image: url('https://interwood.pk/media/wysiwyg/Home-Furniture-Catalog-2022.jpg');
+  /* height: 62vh; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right-bottom {
+  background-image: url('https://interwood.pk/media/wysiwyg/Doors.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box {
+  /* border: 2px solid rgb(247, 17, 17); */
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box>a {
+  /* text-decoration: none; */
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.blog {
+  /* border: 2px solid black; */
+  width: 30%;
+  background-image: url('https://interwood.pk/media/mageplaza/blog/post/4/5/450x335_1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: flex;
+  cursor: pointer;
+}
+
+.content {
+  width: 90%;
+  /* border: 2px solid green; */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 10px 5px;
+  cursor: text;
+}
+
+.content>h3>a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.content>div {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.content>div>a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #21b259;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #21B259;
+  font-size: 20px;
+  margin: 8px 0px;
+}
+
+#sofa-set-designs {
+  background-image: url('https://interwood.pk/media/mageplaza/blog/post/b/e/best_sofa_set_designs_for_wedding_season_2022.jpg');
+}
+
+#blog-item {
+  background-image: url('https://interwood.pk/media/mageplaza/blog/post/r/e/recliner_blog_thumbnail_450x335.jpg');
+}
+
+@media (max-width:700px) {
+  .item>h3 {
+      font-size: 12px;
+  }
+}
+
+@media (max-width:500px) {
+  .item>h3 {
+      font-size: 8px;
+  }
+
+  .blog {
+      overflow: auto;
+      height: 40vh;
+  }
+
+  .left-bottom,
+  .right-bottom {
+      height: 40vh;
+  }
 }
